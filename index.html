@@ -3,139 +3,564 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Mercado - Especialista en Contenido</title>
+    <title>Evelyn Dariana Grabosqui | Profesional de RRHH</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://placehold.co/32x32/10B981/FFFFFF?text=JM" type="image/png">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        html { scroll-behavior: smooth; }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #0ea5e9, #8b5cf6);
+        }
+
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
 </head>
-<body class="gradient-bg">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header class="flex justify-between items-center py-6">
-            <div class="text-2xl font-bold text-white">
-                Jose<span class="text-emerald-500">.</span>
-            </div>
-            <a href="https://calendly.com/delta-growth-agency/llamada-larga-consultas?month=2025-07" class="bg-emerald-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-emerald-700 transition-colors duration-300">
-                Hablemos
-            </a>
-        </header>
-        <main>
-            <section class="text-center py-20 md:py-32 stagger-children">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
-                    Convierto contenido en más de
-                    <span class="text-emerald-400">$50,000</span> para mis clientes
-                </h1>
-                <p class="mt-6 max-w-2x1 mx-auto text-lg md:text-xl text-gray-300">
-                    Soy Jose, especialista en contenido con 3 años de experiencia. Ayudo a empresas como la tuya a escalar su facturación y autoridad de marca.
-                </p>
-                <div class="mt-10">
-                    <a href="https://calendly.com/delta-growth-agency/llamada-larga-consultas?month=2025-07" class="bg-emerald-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105">
-                        Crecé YA
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-heading font-bold text-2xl tracking-tight text-brand-900">Evelyn<span class="text-brand-500">.</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#sobre-mi" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Sobre mí</a>
+                    <a href="#experiencia" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Experiencia</a>
+                    <a href="#habilidades" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Habilidades</a>
+                    <a href="https://wa.me/5493489522447?text=Hola%20Dariana!%20Estuvimos%20viendo%20tu%20perfil%20profesional%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20entrevista." target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-brand-500/30 transform hover:-translate-y-0.5">
+                        Contactar
                     </a>
                 </div>
-            </section>
-            <section id="beneficios" class="py-20 md:py-28">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">¿Por qué trabajar conmigo?</h2>
-                    <p class="mt-4 max-w-xl mx-auto text-gray-300">
-                        Mi enfoque no es solo crear contenido, es construir un activo que genera resultados medibles y predecibles para tu negocio.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
-                    <!-- Beneficio 1 -->
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-emerald-500 hover:scale-105">
-                        <div class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Mayor Autoridad de Marca</h3>
-                        <p class="mt-2 text-gray-400">Posiciono tu marca como líder en tu sector a través de contenido de alto valor que educa y resuelve problemas reales.</p>
-                    </div>
-                    <!-- Beneficio 2 -->
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-emerald-500 hover:scale-105">
-                         <div class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Incremento en Conversiones</h3>
-                        <p class="mt-2 text-gray-400">Cada pieza de contenido está diseñada con un objetivo claro: convertir lectores en clientes potenciales y ventas.</p>
-                    </div>
-                    <!-- Beneficio 3 -->
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-emerald-500 hover:scale-105">
-                         <div class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Tráfico Orgánico Cualificado</h3>
-                        <p class="mt-2 text-gray-400">Atraigo a la audiencia correcta a tu web con estrategias de SEO y contenido que responde a sus intenciones de búsqueda.</p>
-                    </div>
-                <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 transition-all duration-300 hover:border-emerald-500 hover:scale-105">
-                        <div class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Sistema de Contenido Escalable</h3>
-                        <p class="mt-2 text-gray-400">Construyo un sistema que se convierte en un activo digital, generando autoridad y negocio de forma consistente en el tiempo.</p>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </div>
+    </nav>
 
-            <!-- Testimonios -->
-            <section id="testimonios" class="py-20 md:py-28">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">No te fíes solo de <span class="text-emerald-400">mi palabra</span></h2>
-                    <p class="mt-4 max-w-xl mx-auto text-gray-300">
-                        Esto es lo que dicen algunos de los clientes con los que he trabajado.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 stagger-children">
-                    <!-- Testimonio 1 -->
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800">
-                        <p class="text-gray-300 text-lg">"Jose transformó nuestra estrategia de contenidos. En 6 meses, nuestro tráfico orgánico se triplicó y los leads de calidad aumentaron un 150%. Su enfoque estratégico es impecable."</p>
-                        <div class="mt-6 flex items-center">
-                            <img class="w-12 h-12 rounded-full object-cover" src="https://imgs.search.brave.com/S0EtLQ6AOf546FUcPlOQN5KMerisEVWCYRgU3h9RwiQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2Zp/ZmEvaW1hZ2VzLzcv/NzQvSm9zJUMzJUE5/X0VucmlxdWVfUyVD/MyVBMW5jaGV6X0Ql/QzMlQURhei5wbmcv/cmV2aXNpb24vbGF0/ZXN0L3NjYWxlLXRv/LXdpZHRoLWRvd24v/MjY4P2NiPTIwMTYx/MjA2MTkwNjU2" alt="Foto de cliente">
-                            <div class="ml-4">
-                                <p class="font-bold text-white">carlos Álvarez</p>
-                                <p class="text-sm text-gray-400">CEO en TechCorp</p>
-                            </div>
-                        </div>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-pattern">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-100/50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-100/50 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal-left">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-100 text-brand-700 font-semibold text-sm mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 mr-2 animate-pulse"></span>
+                        Disponibilidad Inmediata
                     </div>
-                    <!-- Testimonio 2 -->
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800">
-                        <p class="text-gray-300 text-lg">"Antes de Jose, publicábamos contenido sin rumbo. Él nos dio una hoja de ruta clara que nos posicionó como referentes y nos generó más de $120,000 en nuevo negocio el último año."</p>
-                        <div class="mt-6 flex items-center">
-                            <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/4B5563/FFFFFF?text=MR" alt="Foto de cliente">
-                            <div class="ml-4">
-                                <p class="font-bold text-white">Marcos Rivas</p>
-                                <p class="text-sm text-gray-400">Director de Marketing en InnovateCo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Final y Contacto -->
-            <section id="contacto" class="bg-gray-900 rounded-2xl my-20 md:my-28 py-16 px-8 fade-in">
-                <div class="text-center max-w-2xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">¿Listo para escalar tu facturación con contenido?</h2>
-                    <p class="mt-4 text-gray-300">
-                        Agenda una llamada de 15 minutos, sin compromiso, para analizar cómo puedo ayudarte a alcanzar tus objetivos.
+                    <h1 class="font-heading text-5xl lg:text-6xl font-extrabold text-brand-950 leading-tight mb-6">
+                        Impulsando el <span class="text-gradient">talento</span> y la gestión eficiente.
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
+                        Soy <span class="font-semibold text-brand-900">Dariana Grabosqui</span>, estudiante avanzada de RRHH. Combino 12 años de visión emprendedora con una sólida formación administrativa para aportar valor real a tu organización.
                     </p>
-                    <div class="mt-8">
-                        <a href="https://calendly.com/delta-growth-agency/llamada-larga-consultas?month=2025-07" class="bg-emerald-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105 inline-block">
-                            Quiero mi llamada gratuita
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/5493489522447?text=Hola%20Dariana!%20Estuvimos%20viendo%20tu%20perfil%20profesional%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20entrevista." target="_blank" class="bg-brand-950 hover:bg-brand-900 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-xl flex items-center gap-2 transform hover:-translate-y-1">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Agendar Entrevista
+                        </a>
+                        <a href="#sobre-mi" class="bg-white border-2 border-gray-200 hover:border-brand-500 text-gray-700 hover:text-brand-600 px-8 py-4 rounded-full font-semibold transition-all flex items-center gap-2">
+                            Conocer más <i class="fa-solid fa-arrow-down"></i>
                         </a>
                     </div>
-                    <p class="mt-4 text-sm text-gray-500">O envíame un email a: jose.mercado.content@email.com</p>
                 </div>
-            </section>
+                
+                <div class="reveal-right relative">
+                    <div class="relative w-full max-w-md mx-auto aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                        <!-- Placeholder for Dariana's Photo -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl p-4 text-white">
+                                <p class="font-heading font-semibold text-lg">Técnica Superior en RRHH</p>
+                                <p class="text-white/80 text-sm">A 4 materias de finalizar (Instituto Capacitare)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decor elements -->
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full border border-accent/20 flex items-center justify-center animate-bounce delay-75">
+                        <i class="fa-solid fa-graduation-cap text-accent text-3xl"></i>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-brand-500/10 rounded-full border border-brand-500/20 flex items-center justify-center animate-bounce">
+                        <i class="fa-solid fa-briefcase text-brand-600 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </main>
+    <!-- Stats / Highlights -->
+    <section class="bg-brand-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-brand-800/50">
+                <div class="text-center reveal">
+                    <h3 class="font-heading text-4xl font-bold text-white mb-2">12+</h3>
+                    <p class="text-brand-100/70 text-sm font-medium uppercase tracking-wider">Años de Gestión</p>
+                </div>
+                <div class="text-center reveal delay-100">
+                    <h3 class="font-heading text-4xl font-bold text-white mb-2">100%</h3>
+                    <p class="text-brand-100/70 text-sm font-medium uppercase tracking-wider">Compromiso</p>
+                </div>
+                <div class="text-center reveal delay-200">
+                    <h3 class="font-heading text-4xl font-bold text-white mb-2">4</h3>
+                    <p class="text-brand-100/70 text-sm font-medium uppercase tracking-wider">Materias para el título</p>
+                </div>
+                <div class="text-center reveal delay-300">
+                    <h3 class="font-heading text-4xl font-bold text-white mb-2"><i class="fa-solid fa-car"></i></h3>
+                    <p class="text-brand-100/70 text-sm font-medium uppercase tracking-wider">Movilidad Propia</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="text-center py-8 border-t border-gray-800">
-            <p class="text-gray-400">&copy; 2024 Jose Mercado. Todos los derechos reservados.</p>
-        </footer>
+    <!-- About Me Section -->
+    <section id="sobre-mi" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal-left">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-brand-50 rounded-2xl p-6 shadow-sm border border-brand-100">
+                            <i class="fa-solid fa-users-gear text-3xl text-brand-500 mb-4"></i>
+                            <h4 class="font-heading font-bold text-lg text-brand-900 mb-2">Gestión de Equipos</h4>
+                            <p class="text-sm text-gray-600">Enfoque en selección, capacitación y desarrollo interno.</p>
+                        </div>
+                        <div class="bg-brand-50 rounded-2xl p-6 shadow-sm border border-brand-100 mt-8">
+                            <i class="fa-solid fa-file-invoice-dollar text-3xl text-brand-500 mb-4"></i>
+                            <h4 class="font-heading font-bold text-lg text-brand-900 mb-2">Administración</h4>
+                            <p class="text-sm text-gray-600">Altas/bajas, liquidación, vacaciones y legajos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 reveal-right">
+                    <h2 class="font-heading text-sm font-bold tracking-widest text-brand-500 uppercase mb-3">Conocé mi perfil</h2>
+                    <h3 class="font-heading text-4xl font-bold text-brand-950 mb-6">Proactividad y visión orientada a resultados.</h3>
+                    
+                    <div class="prose prose-lg text-gray-600 space-y-4">
+                        <p>
+                            Mi nombre es <strong>Dariana Grabosqui</strong>, tengo 31 años y soy de Campana, Buenos Aires. Me dirijo a ustedes con el objetivo de expresar mi interés en participar en futuras pasantías, prácticas formativas o procesos de selección dentro del área de Recursos Humanos.
+                        </p>
+                        <p>
+                            Cuento con un <strong>emprendimiento propio que sostengo desde hace 12 años</strong>, el cual pude mantener y hacer crecer gracias a mi constancia, responsabilidad y capacidad de gestión. Esta experiencia me forjó en la resolución de problemas, la toma de decisiones y el trabajo bajo presión.
+                        </p>
+                        <p>
+                            Tengo una fuerte motivación por aprender, integrarme a equipos profesionales y sumar valor desde el primer día. Mi objetivo es continuar desarrollándome en un entorno que me permita aplicar mis conocimientos y adquirir nuevas competencias.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-900">Radicación</p>
+                            <p class="text-sm text-gray-500">Zavalia 1593, B° La Josefa, Campana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- Áreas de Interés -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="font-heading text-sm font-bold tracking-widest text-brand-500 uppercase mb-3">Especialización</h2>
+                <h3 class="font-heading text-3xl font-bold text-brand-950 mb-4">Áreas donde aporto mayor valor</h3>
+                <p class="text-gray-600">Me interesa especialmente desarrollarme y asistir en estos procesos clave de Recursos Humanos.</p>
+            </div>
 
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow reveal delay-100 hover:-translate-y-1 transform duration-300">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-brand-600 text-xl">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-gray-900 text-sm">Altas y Bajas</h4>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow reveal delay-200 hover:-translate-y-1 transform duration-300">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-brand-600 text-xl">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-gray-900 text-sm">Vacaciones</h4>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow reveal delay-300 hover:-translate-y-1 transform duration-300">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-brand-600 text-xl">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-gray-900 text-sm">Liquidación</h4>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow reveal delay-100 hover:-translate-y-1 transform duration-300">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-brand-600 text-xl">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-gray-900 text-sm">Gestión de Legajos</h4>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow reveal delay-200 hover:-translate-y-1 transform duration-300">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mx-auto mb-4 text-brand-600 text-xl">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h4 class="font-heading font-semibold text-gray-900 text-sm">Selección & Capacitación</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experiencia" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="font-heading text-sm font-bold tracking-widest text-brand-500 uppercase mb-3">Trayectoria</h2>
+                <h3 class="font-heading text-3xl font-bold text-brand-950">Experiencia Profesional</h3>
+            </div>
+
+            <div class="relative border-l-2 border-brand-100 ml-3 md:ml-0 md:pl-0">
+                
+                <!-- Timeline Item 1 -->
+                <div class="mb-12 relative pl-8 md:pl-0 reveal">
+                    <div class="hidden md:block absolute left-1/2 w-0.5 h-full bg-brand-100 -translate-x-1/2"></div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right md:pr-12 relative">
+                            <div class="absolute left-[-41px] md:left-auto md:-right-[26px] top-1 w-6 h-6 bg-brand-500 rounded-full border-4 border-white shadow"></div>
+                            <h4 class="font-heading text-xl font-bold text-gray-900">Peluquería Canina Huesitos</h4>
+                            <p class="text-brand-600 font-medium mb-1">Administración y Atención al Público</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium mb-4">Mayo 2013 - Agosto 2024</span>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm md:ml-6">
+                            <p class="text-gray-600 text-sm mb-3">Gestión integral de emprendimiento propio durante más de una década.</p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Brindar atención al cliente de calidad.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Gestión completa de cobros y facturación.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Supervisión de stock, inventarios y reposiciones.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="mb-12 relative pl-8 md:pl-0 reveal">
+                    <div class="hidden md:block absolute left-1/2 w-0.5 h-full bg-brand-100 -translate-x-1/2"></div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:col-start-2 relative md:pl-12">
+                            <div class="absolute left-[-41px] md:-left-[26px] top-1 w-6 h-6 bg-brand-300 rounded-full border-4 border-white shadow z-10"></div>
+                            <h4 class="font-heading text-xl font-bold text-gray-900">Forraje y Pet Shop</h4>
+                            <p class="text-brand-600 font-medium mb-1">Atención al Cliente</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium mb-4">2019 - 2021</span>
+                        </div>
+                        <div class="md:col-start-1 md:row-start-1 md:text-right bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm md:mr-6">
+                            <ul class="space-y-2 text-sm text-gray-600 md:inline-block md:text-left">
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Servicio y asesoramiento al cliente.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Administración y cobro de pagos.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Comercialización y control de stock.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative pl-8 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right md:pr-12 relative">
+                            <div class="absolute left-[-41px] md:left-auto md:-right-[26px] top-1 w-6 h-6 bg-brand-300 rounded-full border-4 border-white shadow z-10"></div>
+                            <h4 class="font-heading text-xl font-bold text-gray-900">Tenaris Siderca</h4>
+                            <p class="text-brand-600 font-medium mb-1">Auditorías - Control de Calidad</p>
+                            <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-medium mb-4">2018</span>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm md:ml-6">
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Realización de auditorías internas.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Supervisión y cumplimiento de normas de calidad.</li>
+                                <li class="flex items-start"><i class="fa-solid fa-check text-brand-500 mt-1 mr-2"></i> Implementación de mejoras basadas en resultados.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="py-24 bg-brand-950 text-white relative overflow-hidden">
+        <!-- Decor -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-800 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-600 rounded-full blur-3xl opacity-30 -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="reveal-left">
+                    <h2 class="font-heading text-sm font-bold tracking-widest text-brand-400 uppercase mb-3">Competencias</h2>
+                    <h3 class="font-heading text-3xl font-bold mb-8">Habilidades & Aptitudes</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Habilidades Comunicativas</span>
+                                <span class="text-brand-300">Alta</span>
+                            </div>
+                            <div class="w-full bg-brand-900 rounded-full h-2">
+                                <div class="bg-brand-400 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Trabajo Colaborativo en Equipo</span>
+                                <span class="text-brand-300">Alta</span>
+                            </div>
+                            <div class="w-full bg-brand-900 rounded-full h-2">
+                                <div class="bg-brand-400 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Resolución de Problemas</span>
+                                <span class="text-brand-300">Alta</span>
+                            </div>
+                            <div class="w-full bg-brand-900 rounded-full h-2">
+                                <div class="bg-brand-400 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Rápido Aprendizaje</span>
+                                <span class="text-brand-300">Alta</span>
+                            </div>
+                            <div class="w-full bg-brand-900 rounded-full h-2">
+                                <div class="bg-brand-400 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-3xl p-8 h-full">
+                        <h4 class="font-heading text-xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-laptop-code text-brand-400"></i> Herramientas e Idiomas
+                        </h4>
+                        
+                        <div class="mb-8">
+                            <p class="text-white/80 mb-3 text-sm">Software</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm flex items-center gap-2">
+                                    <i class="fa-brands fa-microsoft text-brand-400"></i> Microsoft Office (Intermedio)
+                                </span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-white/80 mb-3 text-sm">Idiomas</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm flex items-center gap-2">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="English" class="w-4 h-4"> Inglés - A1
+                                </span>
+                                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm flex items-center gap-2">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" alt="Spanish" class="w-4 h-4"> Español - Nativo
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/10">
+                            <h4 class="font-heading text-lg font-bold mb-4">Destacado:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-brand-500/20 text-brand-300 rounded-full text-xs border border-brand-500/30">Puntualidad</span>
+                                <span class="px-3 py-1 bg-brand-500/20 text-brand-300 rounded-full text-xs border border-brand-500/30">Responsabilidad</span>
+                                <span class="px-3 py-1 bg-brand-500/20 text-brand-300 rounded-full text-xs border border-brand-500/30">Trabajo bajo presión</span>
+                                <span class="px-3 py-1 bg-brand-500/20 text-brand-300 rounded-full text-xs border border-brand-500/30">Organización</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-brand-600 text-white text-center px-4">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="font-heading text-4xl font-bold mb-6">¿Buscás sumar compromiso y gestión a tu equipo?</h2>
+            <p class="text-brand-100 text-lg mb-10">Agradezco la posibilidad de postularme y quedo a entera disposición para una entrevista o para ampliar cualquier información adicional.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/5493489522447?text=Hola%20Dariana!%20Estuvimos%20viendo%20tu%20perfil%20profesional%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20entrevista." target="_blank" class="bg-white text-brand-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg flex items-center justify-center gap-2 transform hover:scale-105 duration-300">
+                    <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i> Hablemos por WhatsApp
+                </a>
+                <a href="mailto:dgrabosqui@gmail.com" class="bg-brand-700 border border-brand-500 hover:bg-brand-800 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope"></i> Enviar Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <span class="font-heading font-bold text-2xl text-white tracking-tight">Evelyn<span class="text-brand-500">.</span></span>
+                    <p class="mt-2 text-sm">Estudiante Avanzada de Administración en RRHH</p>
+                </div>
+                
+                <div class="flex gap-6">
+                    <a href="mailto:dgrabosqui@gmail.com" class="hover:text-white transition-colors" title="dgrabosqui@gmail.com">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/5493489522447" target="_blank" class="hover:text-white transition-colors" title="+54 9 3489 52-2447">
+                        <i class="fa-solid fa-phone text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors" title="Campana, Buenos Aires">
+                        <i class="fa-solid fa-location-dot text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2026 Evelyn Dariana Grabosqui. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493489522447?text=Hola%20Dariana!%20Estuvimos%20viendo%20tu%20perfil%20profesional%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20entrevista." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for Animations and Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.replace('py-4', 'py-0');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.replace('py-0', 'py-4');
+                }
+            });
+
+            // Intersection Observer for Scroll Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing once revealed
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            // Select all elements with reveal classes
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
